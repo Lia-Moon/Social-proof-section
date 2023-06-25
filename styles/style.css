@@ -30,46 +30,133 @@ html, body {
     background-color: var(--white);
 }
 
+.bg__images--top {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 1;
+}
+
+.bg__images--bottom {
+    position: fixed;
+    bottom: 0px;
+    right: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.picture {
+    height: auto;
+}
+
 .main__content {
-    margin: 8% auto;
+    margin: 5% auto;
     width: 80%;
+    position: relative;
+    z-index: 2;
 }
 
 .content__description__and__ratings {
     display: flex;
     margin-bottom: 5%;
+    justify-content: space-between;
+    gap: 2%;
+}
+
+.content__description {
+    max-width: 37%;
 }
 
 .content__description h1 {
     color: var(--very-dark-magenta);
     font-weight: 700;
     font-size: 45px;
+    width: 90%;
+    line-height: 40px;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+}
+
+.content__description p {
+    line-height: 23px;
+    color: var(--dark-grayish-magenta);
+    font-weight: 500;
+}
+
+.content__ratings {
+    color: var(--very-dark-magenta);
+    font-weight: 700;
+}
+
+.content__ratings--companies.one {
+    position: relative;
+    right: 80px;
+}
+
+.content__ratings--companies.two {
+    position: relative;
+    right: 40px;
+}
+
+.content__ratings ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.content__ratings li {
+    display: flex;
+    background-color: var(--light-grayish-magenta);
+    padding: 15px 30px;
+    border-radius: 5px;
+    gap: 30px;
+    align-items: center;
+}
+
+.content__ratings li img {
+    height: 13px;
 }
 
 .content__feedback {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-between;
+    gap: 3%;
 }
 
 .content__feedback--block {
-    width: 260px;
+    width: 80%;
     padding: 30px;
     background-color: var(--very-dark-magenta);
     border-radius: 10px;
     color: var(--white);
 }
 
+.content__feedback--block.two {
+    position: relative;
+    top: 20px;
+}
+
+.content__feedback--block.three {
+    position: relative;
+    top: 40px;
+}
+
 .content__feedback--block--image--description {
     display: flex;
     margin-bottom: 25px;
     gap: 20px;
-    
 }
 
 .content__feedback--block--image--description img {
     border-radius: 100%;
     width: 45px;
+    height: 100%;
+}
+
+.content__feedback--block--image--description h2 {
+    font-weight: 500;
 }
 
 .content__feedback--block--image--description h3 {
@@ -87,11 +174,88 @@ html, body {
     line-height: 23px;
 }
 
+.footer {
+    position: absolute;
+    z-index: 3;
+}
 .attribution {
     font-size: 11px;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 5px;
 }
 
 .attribution a {
     color: var(--soft-pink);
+}
+
+/* Other devices (phones, 800px and down) -----------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 800px) {
+    .bg__images--bottom {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+    }
+
+    .main__content {
+        margin: 10% auto;
+        width: 80%;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .content__description__and__ratings {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content__description {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .content__description h1 {
+        font-size: 35px;
+        line-height: 28px;
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .content__description p {
+        margin-bottom: 20px;
+    }
+
+    .content__ratings {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .content__ratings ul {
+        gap: 15px;
+    }
+
+    .content__ratings li {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 5%;
+    }
+
+    .content__ratings--companies.one {
+        right: 0px;
+    }
+    
+    .content__ratings--companies.two {
+        right: 0px;
+    }
+
+    .content__feedback {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-items: center;
+        margin-bottom: 120px;
+        row-gap: 5px;
+    }
 }

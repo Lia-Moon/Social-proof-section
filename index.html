@@ -16,20 +16,57 @@
 <body>
 
   <main>
+    <div class="bg__images--top">
+      <picture>
+        <source media="(max-width: 800px)" srcset="./images/bg-pattern-top-mobile.svg">
+        <source media="(min-width: 801px)" srcset="./images/bg-pattern-top-desktop.svg">
+        <img src="./images/bg-pattern-top-desktop.svg" alt="Background Top Image">
+      </picture>
+    </div>
+    <div class="bg__images--bottom">
+      <picture>
+        <source media="(max-width: 375px)" srcset="./images/bg-pattern-bottom-mobile.svg">
+        <source media="(min-width: 376px)" srcset="./images/bg-pattern-bottom-desktop.svg">
+        <img src="./images/bg-pattern-bottom-desktop.svg" alt="Background Bottom Image">
+      </picture>
+    </div>
     <div class="main__content">
       <div class="content__description__and__ratings">
         <div class="content__description">
           <h1>10,000+ of our users love our products.</h1>
-
           <p>We only provide great products combined with excellent customer service.
             See what our satisfied customers are saying about our services.</p>
         </div>
 
         <div class="content__ratings">
           <ul>
-            <li>Rated 5 Stars in Reviews</li>
-            <li>Rated 5 Stars in Report Guru</li>
-            <li>Rated 5 Stars in BestTech</li>
+            <li class="content__ratings--companies one">
+              <div class="content__ratings--stars"><img src="./images/icon-star.svg" alt="Star">
+                <img src="./images/icon-star.svg" alt="Star">
+                <img src="./images/icon-star.svg" alt="Star">
+                <img src="./images/icon-star.svg" alt="Star">
+                <img src="./images/icon-star.svg" alt="Star">
+              </div>
+              Rated 5 Stars in Reviews
+            </li>
+            <li class="content__ratings--companies two">
+              <div class="content__ratings--stars"><img src="./images/icon-star.svg" alt="Star">
+                <img src="./images/icon-star.svg" alt="Star">
+                <img src="./images/icon-star.svg" alt="Star">
+                <img src="./images/icon-star.svg" alt="Star">
+                <img src="./images/icon-star.svg" alt="Star">
+              </div>
+              Rated 5 Stars in Report Guru
+            </li>
+            <li class="content__ratings--companies three">
+              <div class="content__ratings--stars"><img src="./images/icon-star.svg" alt="Star">
+                <img src="./images/icon-star.svg" alt="Star">
+                <img src="./images/icon-star.svg" alt="Star">
+                <img src="./images/icon-star.svg" alt="Star">
+                <img src="./images/icon-star.svg" alt="Star">
+              </div>
+              Rated 5 Stars in BestTech
+            </li>
           </ul>
         </div>
       </div>
@@ -74,7 +111,6 @@
       </div>
     </div>
   </main>
-
   <footer>
     <div class="attribution">
       <p>Code <a href="https://github.com/Lia-Moon/Social-proof-section" target="_blank">Github</a>
