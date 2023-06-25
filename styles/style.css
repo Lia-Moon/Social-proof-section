@@ -60,7 +60,7 @@ html, body {
     display: flex;
     margin-bottom: 5%;
     justify-content: space-between;
-    gap: 2%;
+    gap: 2rem;
 }
 
 .content__description {
@@ -123,7 +123,7 @@ html, body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-between;
-    gap: 3%;
+    gap: 2rem;
 }
 
 .content__feedback--block {
